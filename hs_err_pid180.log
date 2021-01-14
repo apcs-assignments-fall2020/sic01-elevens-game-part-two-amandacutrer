@@ -1,0 +1,76 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f19172c9401, pid=180, tid=370
+#
+# JRE version: OpenJDK Runtime Environment (11.0.9.1+1) (build 11.0.9.1+1-Ubuntu-0ubuntu1.18.04)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.9.1+1-Ubuntu-0ubuntu1.18.04, mixed mode, sharing, tiered, compressed oops, serial gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x2401]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/runner/sic01-elevens-game-part-two-amandacutrer-2/core.180)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: Main
+
+Host: Intel(R) Xeon(R) CPU @ 2.30GHz, 4 cores, 512M, Ubuntu 18.04.5 LTS
+Time: Thu Jan 14 07:53:54 2021 UTC elapsed time: 126.292420 seconds (0d 0h 2m 6s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f18b001b800):  JavaThread "XToolkt-Shutdown-Thread" [_thread_in_vm, id=370, stack(0x00007f190feff000,0x00007f1910000000)]
+
+Stack: [0x00007f190feff000,0x00007f1910000000],  sp=0x00007f190fffd060,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x2401]
+C  [libjimage.so+0x30ea]
+C  [libjimage.so+0x35c6]  JIMAGE_FindResource+0xd6
+V  [libjvm.so+0x5bf44e]
+V  [libjvm.so+0x5c21b0]
+V  [libjvm.so+0xe427d5]
+V  [libjvm.so+0xe4008a]
+V  [libjvm.so+0xe42d62]
+V  [libjvm.so+0x677307]
+V  [libjvm.so+0xa6afca]
+V  [libjvm.so+0x874996]
+V  [libjvm.so+0x87588d]
+j  sun.awt.X11.XToolkit.lambda$init$0()V+0 java.desktop@11.0.9.1
+j  sun.awt.X11.XToolkit$$Lambda$10.run()V+4 java.desktop@11.0.9.1
+j  java.lang.Thread.run()V+11 java.base@11.0.9.1
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x87f359]
+V  [libjvm.so+0x87d49d]
+V  [libjvm.so+0x926c7c]
+V  [libjvm.so+0xe7b37f]
+V  [libjvm.so+0xe77acf]
+V  [libjvm.so+0xc1977e]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.X11.XToolkit.lambda$init$0()V+0 java.desktop@11.0.9.1
+j  sun.awt.X11.XToolkit$$Lambda$10.run()V+4 java.desktop@11.0.9.1
+j  java.lang.Thread.run()V+11 java.base@11.0.9.1
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f19078a5758
+
+Register to memory mapping:
+
+RAX=0x00000000000031cf is an unknown value
+RBX=0x00007f190fffd111 is pointing into the stack for thread: 0x00007f18b001b800
+RCX=0x00007f190789901c is an unknown value
+RDX=0x00000000000031cf is an unknown value
+RSP=0x00007f190fffd060 is pointing into the stack for thread: 0x00007f18b001b800
+RBP=0x00007f190fffd080 is pointing into the stack for thread: 0x00007f18b001b800
+RSI=0x00007f190fffd110 is pointing into the stack for thread: 0x00007f18b001b800
+RDI=0x00007f19174cc030: <offset 0x0000000000205030> in /usr/lib/jvm/java-11-openjdk-amd64/lib/libjimage.so at 0x00007f19172c7000
+R8 =0x0 is NULL
+R9 =0x00000000ca0d71f0 is an unknown value
+R10=0x00007f190fffd134 is pointing into the stack for thread: 0x00007f18b001b800
+R11=0x00007f191a181440: <offset 0x00000000001af440> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f1919fd2000
+R12=0x00007f190fffd110 is pointing into the stack for thread: 0x00007f18b001b800
+R13=
